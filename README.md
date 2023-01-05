@@ -2,6 +2,10 @@
 
 A minimal Tic Tac Toe game written in HTML, CSS and JavaScript.
 
+## Live Demo
+
+- [Play Now](https://emanuelefavero.github.io/tic-tac-toe/)
+
 #### Screenshot
 
 <img src="screenshot.png" alt="screenshot" width="300">
