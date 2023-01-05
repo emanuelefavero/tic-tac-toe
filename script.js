@@ -50,9 +50,9 @@ document.addEventListener('DOMContentLoaded', () => {
           squares[1].innerHTML === 'x' &&
           squares[2].innerHTML === 'x'
         ) {
-          squares[0].style.color = 'green'
-          squares[1].style.color = 'green'
-          squares[2].style.color = 'green'
+          squares[0].style.color = '#059669'
+          squares[1].style.color = '#059669'
+          squares[2].style.color = '#059669'
           gameOverFunction()
         }
         if (
@@ -60,9 +60,9 @@ document.addEventListener('DOMContentLoaded', () => {
           squares[4].innerHTML === 'x' &&
           squares[8].innerHTML === 'x'
         ) {
-          squares[0].style.color = 'green'
-          squares[4].style.color = 'green'
-          squares[8].style.color = 'green'
+          squares[0].style.color = '#059669'
+          squares[4].style.color = '#059669'
+          squares[8].style.color = '#059669'
           gameOverFunction()
         }
         if (
@@ -70,9 +70,9 @@ document.addEventListener('DOMContentLoaded', () => {
           squares[3].innerHTML === 'x' &&
           squares[6].innerHTML === 'x'
         ) {
-          squares[0].style.color = 'green'
-          squares[3].style.color = 'green'
-          squares[6].style.color = 'green'
+          squares[0].style.color = '#059669'
+          squares[3].style.color = '#059669'
+          squares[6].style.color = '#059669'
           gameOverFunction()
         }
         if (
@@ -80,9 +80,9 @@ document.addEventListener('DOMContentLoaded', () => {
           squares[4].innerHTML === 'x' &&
           squares[7].innerHTML === 'x'
         ) {
-          squares[1].style.color = 'green'
-          squares[4].style.color = 'green'
-          squares[7].style.color = 'green'
+          squares[1].style.color = '#059669'
+          squares[4].style.color = '#059669'
+          squares[7].style.color = '#059669'
           gameOverFunction()
         }
         if (
@@ -90,9 +90,9 @@ document.addEventListener('DOMContentLoaded', () => {
           squares[5].innerHTML === 'x' &&
           squares[8].innerHTML === 'x'
         ) {
-          squares[2].style.color = 'green'
-          squares[5].style.color = 'green'
-          squares[8].style.color = 'green'
+          squares[2].style.color = '#059669'
+          squares[5].style.color = '#059669'
+          squares[8].style.color = '#059669'
           gameOverFunction()
         }
         if (
@@ -100,9 +100,9 @@ document.addEventListener('DOMContentLoaded', () => {
           squares[4].innerHTML === 'x' &&
           squares[5].innerHTML === 'x'
         ) {
-          squares[3].style.color = 'green'
-          squares[4].style.color = 'green'
-          squares[5].style.color = 'green'
+          squares[3].style.color = '#059669'
+          squares[4].style.color = '#059669'
+          squares[5].style.color = '#059669'
           gameOverFunction()
         }
         if (
@@ -110,9 +110,9 @@ document.addEventListener('DOMContentLoaded', () => {
           squares[7].innerHTML === 'x' &&
           squares[8].innerHTML === 'x'
         ) {
-          squares[6].style.color = 'green'
-          squares[7].style.color = 'green'
-          squares[8].style.color = 'green'
+          squares[6].style.color = '#059669'
+          squares[7].style.color = '#059669'
+          squares[8].style.color = '#059669'
           gameOverFunction()
         }
         // Check if O wins
@@ -121,9 +121,9 @@ document.addEventListener('DOMContentLoaded', () => {
           squares[1].innerHTML === 'o' &&
           squares[2].innerHTML === 'o'
         ) {
-          squares[0].style.color = 'green'
-          squares[1].style.color = 'green'
-          squares[2].style.color = 'green'
+          squares[0].style.color = '#059669'
+          squares[1].style.color = '#059669'
+          squares[2].style.color = '#059669'
           gameOverFunction()
         }
         if (
@@ -131,9 +131,9 @@ document.addEventListener('DOMContentLoaded', () => {
           squares[4].innerHTML === 'o' &&
           squares[8].innerHTML === 'o'
         ) {
-          squares[0].style.color = 'green'
-          squares[4].style.color = 'green'
-          squares[8].style.color = 'green'
+          squares[0].style.color = '#059669'
+          squares[4].style.color = '#059669'
+          squares[8].style.color = '#059669'
           gameOverFunction()
         }
         if (
@@ -141,9 +141,9 @@ document.addEventListener('DOMContentLoaded', () => {
           squares[3].innerHTML === 'o' &&
           squares[6].innerHTML === 'o'
         ) {
-          squares[0].style.color = 'green'
-          squares[3].style.color = 'green'
-          squares[6].style.color = 'green'
+          squares[0].style.color = '#059669'
+          squares[3].style.color = '#059669'
+          squares[6].style.color = '#059669'
           gameOverFunction()
         }
         if (
@@ -151,9 +151,9 @@ document.addEventListener('DOMContentLoaded', () => {
           squares[4].innerHTML === 'o' &&
           squares[7].innerHTML === 'o'
         ) {
-          squares[1].style.color = 'green'
-          squares[4].style.color = 'green'
-          squares[7].style.color = 'green'
+          squares[1].style.color = '#059669'
+          squares[4].style.color = '#059669'
+          squares[7].style.color = '#059669'
           gameOverFunction()
         }
         if (
@@ -161,9 +161,9 @@ document.addEventListener('DOMContentLoaded', () => {
           squares[5].innerHTML === 'o' &&
           squares[8].innerHTML === 'o'
         ) {
-          squares[2].style.color = 'green'
-          squares[5].style.color = 'green'
-          squares[8].style.color = 'green'
+          squares[2].style.color = '#059669'
+          squares[5].style.color = '#059669'
+          squares[8].style.color = '#059669'
           gameOverFunction()
         }
         if (
@@ -171,9 +171,9 @@ document.addEventListener('DOMContentLoaded', () => {
           squares[4].innerHTML === 'o' &&
           squares[5].innerHTML === 'o'
         ) {
-          squares[3].style.color = 'green'
-          squares[4].style.color = 'green'
-          squares[5].style.color = 'green'
+          squares[3].style.color = '#059669'
+          squares[4].style.color = '#059669'
+          squares[5].style.color = '#059669'
           gameOverFunction()
         }
         if (
@@ -181,9 +181,9 @@ document.addEventListener('DOMContentLoaded', () => {
           squares[7].innerHTML === 'o' &&
           squares[8].innerHTML === 'o'
         ) {
-          squares[6].style.color = 'green'
-          squares[7].style.color = 'green'
-          squares[8].style.color = 'green'
+          squares[6].style.color = '#059669'
+          squares[7].style.color = '#059669'
+          squares[8].style.color = '#059669'
           gameOverFunction()
         }
 
