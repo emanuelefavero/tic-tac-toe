@@ -14,3 +14,7 @@ A minimal Tic Tac Toe game written in HTML, CSS and JavaScript.
 
 1. Clone the repository
 2. Open `index.html` in your browser
+
+## License
+
+- [MIT](LICENSE.md)
