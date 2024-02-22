@@ -5,9 +5,17 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentPlayer = 'player O'
   let counter = 0
 
+  let isGameOver = false // throttle the game over function
+
   // Add event listener to each square
   squares.forEach((square) => {
     square.addEventListener('click', () => {
+      // Check if the square is already filled, if it is, then do nothing
+      if (square.innerHTML !== '') return
+
+      // Check if the game is over, if it is, then do nothing
+      if (isGameOver) return
+
       // Every time a square is clicked, the counter goes up by 1
       counter++
 
@@ -28,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       // * GAME OVER
-      let isGameOver = false // throttle the game over function
+      // let isGameOver = false // throttle the game over function
 
       function gameOver() {
         // THROTTLE: Prevent further calls if game is already over
@@ -48,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
           currentPlayer = 'player O'
           counter = 0 // Reset the counter for the next game
 
-          // isGameOver = false
+          isGameOver = false
         }, 1000) // Adjust the timeout as needed
       }
 
