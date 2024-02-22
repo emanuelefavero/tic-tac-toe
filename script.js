@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
           counter = 0
         }
 
-        // * Check if X wins
+        // * Check if X or O wins
         function checkWhoWins(player, color) {
           if (
             squares[0].innerHTML === player &&
