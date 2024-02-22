@@ -3,7 +3,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
 
 :root {
-  --tic-tac-lines-color: #333333;
+  --border-color: #333333;
+  --text-color: #333333;
+  --background-color: #ffffff;
+  --square-hover-bg-color: rgba(72, 103, 196, 0.08);
 }
 
 * {
@@ -13,27 +16,22 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
   width: 100%;
   height: 100vh;
-  background: rgb(255, 255, 255);
-  color: #333333;
-}
 
-.flex {
+  background: var(--background-color);
+  color: var(--text-color);
+
   display: flex;
-}
-
-.center {
   justify-content: center;
   align-items: center;
-}
-
-.direction-column {
   flex-direction: column;
+
+  font-family: 'Poppins', sans-serif;
 }
 
 /* TIC TAC TOE */
+/* Title */
 h2.player {
   font-size: 1.5rem;
   text-transform: uppercase;
@@ -41,53 +39,55 @@ h2.player {
   user-select: none;
 }
 
+/* Squares */
 .square-container {
-  /* flex-wrap: wrap; */
   width: 375px;
   height: 375px;
+
   display: grid;
   grid-template-columns: 125px 125px 125px;
   grid-template-rows: 125px 125px 125px;
-  /* background: rgba(0, 0, 0, 0.04); */
+
   border-radius: 40px;
   overflow: hidden;
-}
-.square-container .square {
-  width: 125px;
-  height: 125px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 4rem;
-  transition: 1s;
-  user-select: none;
-}
 
-.square-container .square:hover {
-  transition: 0.2s;
-  background: rgba(72, 103, 196, 0.08);
-}
+  & .square {
+    width: 125px;
+    height: 125px;
 
-.square:nth-of-type(1),
-.square:nth-of-type(2),
-.square:nth-of-type(4),
-.square:nth-of-type(5),
-.square:nth-of-type(7),
-.square:nth-of-type(8) {
-  border-right: 2px solid black;
-}
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-.square:nth-of-type(1),
-.square:nth-of-type(2),
-.square:nth-of-type(3),
-.square:nth-of-type(4),
-.square:nth-of-type(5),
-.square:nth-of-type(6) {
-  border-bottom: 2px solid black;
-}
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 4rem;
 
-.win {
-  color: green;
+    user-select: none;
+    transition: 0.8s;
+
+    &:hover {
+      background: var(--square-hover-bg-color);
+      transition: 0.2s;
+    }
+
+    /* Add classic Tic Tac Toe borders */
+    &:nth-of-type(1),
+    &:nth-of-type(2),
+    &:nth-of-type(4),
+    &:nth-of-type(5),
+    &:nth-of-type(7),
+    &:nth-of-type(8) {
+      border-right: 2px solid var(--border-color);
+    }
+
+    &:nth-of-type(1),
+    &:nth-of-type(2),
+    &:nth-of-type(3),
+    &:nth-of-type(4),
+    &:nth-of-type(5),
+    &:nth-of-type(6) {
+      border-bottom: 2px solid var(--border-color);
+    }
+  }
 }
