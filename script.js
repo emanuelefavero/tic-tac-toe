@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Add event listener to each square
   squares.forEach((square) => {
-    square.addEventListener('click', (e) => {
+    square.addEventListener('click', () => {
       // Every time a square is clicked, the counter goes up by 1
       counter++
 
@@ -27,25 +27,33 @@ document.addEventListener('DOMContentLoaded', () => {
         currentPlayer = 'player O'
       }
 
-      // Game Over
-      function gameOverFunction() {
+      // * GAME OVER
+      function gameOver() {
         setTimeout(() => {
-          clearInterval(gameOver)
-          squares.forEach((square) => {})
+          // Reset the game
           setTimeout(() => {
             squares.forEach((square) => {
               square.innerHTML = ''
               square.style.color = 'black'
             })
           }, 500)
+
+          // Reset the player display
           playerDisplay.innerHTML = 'player X'
           currentPlayer = 'player O'
         }, 500)
       }
 
-      const gameOver = setInterval(() => {
-        // Check if X wins
-        if (
+      // * CHECK WINNER
+      function checkWinner() {
+        // * Check if draw
+        if (counter > 8) {
+          gameOver()
+          counter = 0
+        }
+
+        // * Check if X wins
+        else if (
           squares[0].innerHTML === 'x' &&
           squares[1].innerHTML === 'x' &&
           squares[2].innerHTML === 'x'
@@ -53,9 +61,8 @@ document.addEventListener('DOMContentLoaded', () => {
           squares[0].style.color = '#059669'
           squares[1].style.color = '#059669'
           squares[2].style.color = '#059669'
-          gameOverFunction()
-        }
-        if (
+          gameOver()
+        } else if (
           squares[0].innerHTML === 'x' &&
           squares[4].innerHTML === 'x' &&
           squares[8].innerHTML === 'x'
@@ -63,9 +70,8 @@ document.addEventListener('DOMContentLoaded', () => {
           squares[0].style.color = '#059669'
           squares[4].style.color = '#059669'
           squares[8].style.color = '#059669'
-          gameOverFunction()
-        }
-        if (
+          gameOver()
+        } else if (
           squares[0].innerHTML === 'x' &&
           squares[3].innerHTML === 'x' &&
           squares[6].innerHTML === 'x'
@@ -73,9 +79,8 @@ document.addEventListener('DOMContentLoaded', () => {
           squares[0].style.color = '#059669'
           squares[3].style.color = '#059669'
           squares[6].style.color = '#059669'
-          gameOverFunction()
-        }
-        if (
+          gameOver()
+        } else if (
           squares[1].innerHTML === 'x' &&
           squares[4].innerHTML === 'x' &&
           squares[7].innerHTML === 'x'
@@ -83,9 +88,8 @@ document.addEventListener('DOMContentLoaded', () => {
           squares[1].style.color = '#059669'
           squares[4].style.color = '#059669'
           squares[7].style.color = '#059669'
-          gameOverFunction()
-        }
-        if (
+          gameOver()
+        } else if (
           squares[2].innerHTML === 'x' &&
           squares[5].innerHTML === 'x' &&
           squares[8].innerHTML === 'x'
@@ -93,9 +97,8 @@ document.addEventListener('DOMContentLoaded', () => {
           squares[2].style.color = '#059669'
           squares[5].style.color = '#059669'
           squares[8].style.color = '#059669'
-          gameOverFunction()
-        }
-        if (
+          gameOver()
+        } else if (
           squares[3].innerHTML === 'x' &&
           squares[4].innerHTML === 'x' &&
           squares[5].innerHTML === 'x'
@@ -103,9 +106,8 @@ document.addEventListener('DOMContentLoaded', () => {
           squares[3].style.color = '#059669'
           squares[4].style.color = '#059669'
           squares[5].style.color = '#059669'
-          gameOverFunction()
-        }
-        if (
+          gameOver()
+        } else if (
           squares[6].innerHTML === 'x' &&
           squares[7].innerHTML === 'x' &&
           squares[8].innerHTML === 'x'
@@ -113,10 +115,11 @@ document.addEventListener('DOMContentLoaded', () => {
           squares[6].style.color = '#059669'
           squares[7].style.color = '#059669'
           squares[8].style.color = '#059669'
-          gameOverFunction()
+          gameOver()
         }
-        // Check if O wins
-        if (
+
+        // * Check if O wins
+        else if (
           squares[0].innerHTML === 'o' &&
           squares[1].innerHTML === 'o' &&
           squares[2].innerHTML === 'o'
@@ -124,9 +127,8 @@ document.addEventListener('DOMContentLoaded', () => {
           squares[0].style.color = '#059669'
           squares[1].style.color = '#059669'
           squares[2].style.color = '#059669'
-          gameOverFunction()
-        }
-        if (
+          gameOver()
+        } else if (
           squares[0].innerHTML === 'o' &&
           squares[4].innerHTML === 'o' &&
           squares[8].innerHTML === 'o'
@@ -134,9 +136,8 @@ document.addEventListener('DOMContentLoaded', () => {
           squares[0].style.color = '#059669'
           squares[4].style.color = '#059669'
           squares[8].style.color = '#059669'
-          gameOverFunction()
-        }
-        if (
+          gameOver()
+        } else if (
           squares[0].innerHTML === 'o' &&
           squares[3].innerHTML === 'o' &&
           squares[6].innerHTML === 'o'
@@ -144,9 +145,8 @@ document.addEventListener('DOMContentLoaded', () => {
           squares[0].style.color = '#059669'
           squares[3].style.color = '#059669'
           squares[6].style.color = '#059669'
-          gameOverFunction()
-        }
-        if (
+          gameOver()
+        } else if (
           squares[1].innerHTML === 'o' &&
           squares[4].innerHTML === 'o' &&
           squares[7].innerHTML === 'o'
@@ -154,9 +154,8 @@ document.addEventListener('DOMContentLoaded', () => {
           squares[1].style.color = '#059669'
           squares[4].style.color = '#059669'
           squares[7].style.color = '#059669'
-          gameOverFunction()
-        }
-        if (
+          gameOver()
+        } else if (
           squares[2].innerHTML === 'o' &&
           squares[5].innerHTML === 'o' &&
           squares[8].innerHTML === 'o'
@@ -164,9 +163,8 @@ document.addEventListener('DOMContentLoaded', () => {
           squares[2].style.color = '#059669'
           squares[5].style.color = '#059669'
           squares[8].style.color = '#059669'
-          gameOverFunction()
-        }
-        if (
+          gameOver()
+        } else if (
           squares[3].innerHTML === 'o' &&
           squares[4].innerHTML === 'o' &&
           squares[5].innerHTML === 'o'
@@ -174,9 +172,8 @@ document.addEventListener('DOMContentLoaded', () => {
           squares[3].style.color = '#059669'
           squares[4].style.color = '#059669'
           squares[5].style.color = '#059669'
-          gameOverFunction()
-        }
-        if (
+          gameOver()
+        } else if (
           squares[6].innerHTML === 'o' &&
           squares[7].innerHTML === 'o' &&
           squares[8].innerHTML === 'o'
@@ -184,14 +181,12 @@ document.addEventListener('DOMContentLoaded', () => {
           squares[6].style.color = '#059669'
           squares[7].style.color = '#059669'
           squares[8].style.color = '#059669'
-          gameOverFunction()
+          gameOver()
         }
+      }
 
-        // Check if draw
-        if (counter > 8) {
-          gameOverFunction()
-          counter = 0
-        }
+      setTimeout(() => {
+        checkWinner()
       }, 100)
     })
   })
