@@ -28,20 +28,28 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       // * GAME OVER
+      let isGameOver = false // throttle the game over function
+
       function gameOver() {
+        // THROTTLE: Prevent further calls if game is already over
+        if (isGameOver) return
+
+        isGameOver = true
+
         setTimeout(() => {
           // Reset the game
-          setTimeout(() => {
-            squares.forEach((square) => {
-              square.innerHTML = ''
-              square.style.color = 'black'
-            })
-          }, 500)
+          squares.forEach((square) => {
+            square.innerHTML = ''
+            square.style.color = 'black'
+          })
 
-          // Reset the player display
+          // Reset the player display and current player
           playerDisplay.innerHTML = 'player X'
           currentPlayer = 'player O'
-        }, 500)
+          counter = 0 // Reset the counter for the next game
+
+          // isGameOver = false
+        }, 1000) // Adjust the timeout as needed
       }
 
       // * CHECK WINNER
