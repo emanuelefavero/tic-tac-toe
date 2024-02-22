@@ -64,80 +64,100 @@ document.addEventListener('DOMContentLoaded', () => {
       function checkWinner() {
         // * Check if draw
         if (counter > 8) {
+          // Show draw message
+          playerDisplay.innerHTML = 'Draw'
+
+          // Display grey colors on the squares
+          squares.forEach((square) => {
+            square.style.color = '#9ca3af'
+          })
+
+          // Call the gameOver function
           gameOver()
           counter = 0
-        }
-
-        // * Check if X or O wins
-        function checkWhoWins(player, color) {
-          if (
-            squares[0].innerHTML === player &&
-            squares[1].innerHTML === player &&
-            squares[2].innerHTML === player
-          ) {
-            squares[0].style.color = color
-            squares[1].style.color = color
-            squares[2].style.color = color
-            gameOver()
-          } else if (
-            squares[0].innerHTML === player &&
-            squares[4].innerHTML === player &&
-            squares[8].innerHTML === player
-          ) {
-            squares[0].style.color = color
-            squares[4].style.color = color
-            squares[8].style.color = color
-            gameOver()
-          } else if (
-            squares[0].innerHTML === player &&
-            squares[3].innerHTML === player &&
-            squares[6].innerHTML === player
-          ) {
-            squares[0].style.color = color
-            squares[3].style.color = color
-            squares[6].style.color = color
-            gameOver()
-          } else if (
-            squares[1].innerHTML === player &&
-            squares[4].innerHTML === player &&
-            squares[7].innerHTML === player
-          ) {
-            squares[1].style.color = color
-            squares[4].style.color = color
-            squares[7].style.color = color
-            gameOver()
-          } else if (
-            squares[2].innerHTML === player &&
-            squares[5].innerHTML === player &&
-            squares[8].innerHTML === player
-          ) {
-            squares[2].style.color = color
-            squares[5].style.color = color
-            squares[8].style.color = color
-            gameOver()
-          } else if (
-            squares[3].innerHTML === player &&
-            squares[4].innerHTML === player &&
-            squares[5].innerHTML === player
-          ) {
-            squares[3].style.color = color
-            squares[4].style.color = color
-            squares[5].style.color = color
-            gameOver()
-          } else if (
-            squares[6].innerHTML === player &&
-            squares[7].innerHTML === player &&
-            squares[8].innerHTML === player
-          ) {
-            squares[6].style.color = color
-            squares[7].style.color = color
-            squares[8].style.color = color
-            gameOver()
+        } else {
+          // * Check if any player wins
+          function checkWhoWins(player, color) {
+            if (
+              squares[0].innerHTML === player &&
+              squares[1].innerHTML === player &&
+              squares[2].innerHTML === player
+            ) {
+              squares[0].style.color = color
+              squares[1].style.color = color
+              squares[2].style.color = color
+              gameOver()
+            } else if (
+              squares[0].innerHTML === player &&
+              squares[4].innerHTML === player &&
+              squares[8].innerHTML === player
+            ) {
+              squares[0].style.color = color
+              squares[4].style.color = color
+              squares[8].style.color = color
+              gameOver()
+            } else if (
+              squares[0].innerHTML === player &&
+              squares[3].innerHTML === player &&
+              squares[6].innerHTML === player
+            ) {
+              squares[0].style.color = color
+              squares[3].style.color = color
+              squares[6].style.color = color
+              gameOver()
+            } else if (
+              squares[1].innerHTML === player &&
+              squares[4].innerHTML === player &&
+              squares[7].innerHTML === player
+            ) {
+              squares[1].style.color = color
+              squares[4].style.color = color
+              squares[7].style.color = color
+              gameOver()
+            } else if (
+              squares[2].innerHTML === player &&
+              squares[5].innerHTML === player &&
+              squares[8].innerHTML === player
+            ) {
+              squares[2].style.color = color
+              squares[5].style.color = color
+              squares[8].style.color = color
+              gameOver()
+            } else if (
+              squares[3].innerHTML === player &&
+              squares[4].innerHTML === player &&
+              squares[5].innerHTML === player
+            ) {
+              squares[3].style.color = color
+              squares[4].style.color = color
+              squares[5].style.color = color
+              gameOver()
+            } else if (
+              squares[6].innerHTML === player &&
+              squares[7].innerHTML === player &&
+              squares[8].innerHTML === player
+            ) {
+              squares[6].style.color = color
+              squares[7].style.color = color
+              squares[8].style.color = color
+              gameOver()
+            } else if (
+              squares[2].innerHTML === player &&
+              squares[4].innerHTML === player &&
+              squares[6].innerHTML === player
+            ) {
+              squares[2].style.color = color
+              squares[4].style.color = color
+              squares[6].style.color = color
+              gameOver()
+            } else {
+              return
+            }
           }
-        }
 
-        checkWhoWins('x', '#059669')
-        checkWhoWins('o', '#059669')
+          checkWhoWins('x', '#059669')
+          checkWhoWins('o', '#059669')
+        }
       }
 
       checkWinner()
