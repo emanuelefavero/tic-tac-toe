@@ -61,136 +61,75 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // * Check if X wins
-        else if (
-          squares[0].innerHTML === 'x' &&
-          squares[1].innerHTML === 'x' &&
-          squares[2].innerHTML === 'x'
-        ) {
-          squares[0].style.color = '#059669'
-          squares[1].style.color = '#059669'
-          squares[2].style.color = '#059669'
-          gameOver()
-        } else if (
-          squares[0].innerHTML === 'x' &&
-          squares[4].innerHTML === 'x' &&
-          squares[8].innerHTML === 'x'
-        ) {
-          squares[0].style.color = '#059669'
-          squares[4].style.color = '#059669'
-          squares[8].style.color = '#059669'
-          gameOver()
-        } else if (
-          squares[0].innerHTML === 'x' &&
-          squares[3].innerHTML === 'x' &&
-          squares[6].innerHTML === 'x'
-        ) {
-          squares[0].style.color = '#059669'
-          squares[3].style.color = '#059669'
-          squares[6].style.color = '#059669'
-          gameOver()
-        } else if (
-          squares[1].innerHTML === 'x' &&
-          squares[4].innerHTML === 'x' &&
-          squares[7].innerHTML === 'x'
-        ) {
-          squares[1].style.color = '#059669'
-          squares[4].style.color = '#059669'
-          squares[7].style.color = '#059669'
-          gameOver()
-        } else if (
-          squares[2].innerHTML === 'x' &&
-          squares[5].innerHTML === 'x' &&
-          squares[8].innerHTML === 'x'
-        ) {
-          squares[2].style.color = '#059669'
-          squares[5].style.color = '#059669'
-          squares[8].style.color = '#059669'
-          gameOver()
-        } else if (
-          squares[3].innerHTML === 'x' &&
-          squares[4].innerHTML === 'x' &&
-          squares[5].innerHTML === 'x'
-        ) {
-          squares[3].style.color = '#059669'
-          squares[4].style.color = '#059669'
-          squares[5].style.color = '#059669'
-          gameOver()
-        } else if (
-          squares[6].innerHTML === 'x' &&
-          squares[7].innerHTML === 'x' &&
-          squares[8].innerHTML === 'x'
-        ) {
-          squares[6].style.color = '#059669'
-          squares[7].style.color = '#059669'
-          squares[8].style.color = '#059669'
-          gameOver()
+        function checkWhoWins(player, color) {
+          if (
+            squares[0].innerHTML === player &&
+            squares[1].innerHTML === player &&
+            squares[2].innerHTML === player
+          ) {
+            squares[0].style.color = color
+            squares[1].style.color = color
+            squares[2].style.color = color
+            gameOver()
+          } else if (
+            squares[0].innerHTML === player &&
+            squares[4].innerHTML === player &&
+            squares[8].innerHTML === player
+          ) {
+            squares[0].style.color = color
+            squares[4].style.color = color
+            squares[8].style.color = color
+            gameOver()
+          } else if (
+            squares[0].innerHTML === player &&
+            squares[3].innerHTML === player &&
+            squares[6].innerHTML === player
+          ) {
+            squares[0].style.color = color
+            squares[3].style.color = color
+            squares[6].style.color = color
+            gameOver()
+          } else if (
+            squares[1].innerHTML === player &&
+            squares[4].innerHTML === player &&
+            squares[7].innerHTML === player
+          ) {
+            squares[1].style.color = color
+            squares[4].style.color = color
+            squares[7].style.color = color
+            gameOver()
+          } else if (
+            squares[2].innerHTML === player &&
+            squares[5].innerHTML === player &&
+            squares[8].innerHTML === player
+          ) {
+            squares[2].style.color = color
+            squares[5].style.color = color
+            squares[8].style.color = color
+            gameOver()
+          } else if (
+            squares[3].innerHTML === player &&
+            squares[4].innerHTML === player &&
+            squares[5].innerHTML === player
+          ) {
+            squares[3].style.color = color
+            squares[4].style.color = color
+            squares[5].style.color = color
+            gameOver()
+          } else if (
+            squares[6].innerHTML === player &&
+            squares[7].innerHTML === player &&
+            squares[8].innerHTML === player
+          ) {
+            squares[6].style.color = color
+            squares[7].style.color = color
+            squares[8].style.color = color
+            gameOver()
+          }
         }
 
-        // * Check if O wins
-        else if (
-          squares[0].innerHTML === 'o' &&
-          squares[1].innerHTML === 'o' &&
-          squares[2].innerHTML === 'o'
-        ) {
-          squares[0].style.color = '#059669'
-          squares[1].style.color = '#059669'
-          squares[2].style.color = '#059669'
-          gameOver()
-        } else if (
-          squares[0].innerHTML === 'o' &&
-          squares[4].innerHTML === 'o' &&
-          squares[8].innerHTML === 'o'
-        ) {
-          squares[0].style.color = '#059669'
-          squares[4].style.color = '#059669'
-          squares[8].style.color = '#059669'
-          gameOver()
-        } else if (
-          squares[0].innerHTML === 'o' &&
-          squares[3].innerHTML === 'o' &&
-          squares[6].innerHTML === 'o'
-        ) {
-          squares[0].style.color = '#059669'
-          squares[3].style.color = '#059669'
-          squares[6].style.color = '#059669'
-          gameOver()
-        } else if (
-          squares[1].innerHTML === 'o' &&
-          squares[4].innerHTML === 'o' &&
-          squares[7].innerHTML === 'o'
-        ) {
-          squares[1].style.color = '#059669'
-          squares[4].style.color = '#059669'
-          squares[7].style.color = '#059669'
-          gameOver()
-        } else if (
-          squares[2].innerHTML === 'o' &&
-          squares[5].innerHTML === 'o' &&
-          squares[8].innerHTML === 'o'
-        ) {
-          squares[2].style.color = '#059669'
-          squares[5].style.color = '#059669'
-          squares[8].style.color = '#059669'
-          gameOver()
-        } else if (
-          squares[3].innerHTML === 'o' &&
-          squares[4].innerHTML === 'o' &&
-          squares[5].innerHTML === 'o'
-        ) {
-          squares[3].style.color = '#059669'
-          squares[4].style.color = '#059669'
-          squares[5].style.color = '#059669'
-          gameOver()
-        } else if (
-          squares[6].innerHTML === 'o' &&
-          squares[7].innerHTML === 'o' &&
-          squares[8].innerHTML === 'o'
-        ) {
-          squares[6].style.color = '#059669'
-          squares[7].style.color = '#059669'
-          squares[8].style.color = '#059669'
-          gameOver()
-        }
+        checkWhoWins('x', '#059669')
+        checkWhoWins('o', '#059669')
       }
 
       checkWinner()
