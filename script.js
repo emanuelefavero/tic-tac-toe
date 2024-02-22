@@ -193,9 +193,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       }
 
-      setTimeout(() => {
-        checkWinner()
-      }, 100)
+      checkWinner()
     })
   })
 })
